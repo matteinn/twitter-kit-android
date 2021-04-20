@@ -15,9 +15,6 @@ ext {
             spoonGradlePlugin          : 'com.stanfy.spoon:spoon-gradle-plugin:1.0.4',
             androidGradlePlugin        : 'com.android.tools.build:gradle:3.0.0',
 
-            // Mopub
-            mopub                      : 'com.mopub:mopub-sdk-native-static:4.11.0@aar',
-
             // Sample App
             leakCanary                 : 'com.squareup.leakcanary:leakcanary-android:1.5.3',
             leakCanaryNoOp             : 'com.squareup.leakcanary:leakcanary-android-no-op:1.5.3',
@@ -35,8 +32,6 @@ ext {
 
             // Other
             picasso                    : 'com.squareup.picasso:picasso:2.5.2',
-            supportCompatV4            : 'com.android.support:support-compat:26.1.0',
-            supportCoreV4              : 'com.android.support:support-core-ui:26.1.0',
             retrofit                   : 'com.squareup.retrofit2:retrofit:2.3.0',
             retrofitMock               : 'com.squareup.retrofit2:retrofit-mock:2.3.0',
             retrofitGsonConverter      : 'com.squareup.retrofit2:converter-gson:2.3.0',
@@ -44,7 +39,6 @@ ext {
             okHttp                     : 'com.squareup.okhttp3:okhttp:3.8.0',
             okHttpInterceptor          : 'com.squareup.okhttp3:logging-interceptor:3.8.0',
             design                     : 'com.android.support:design:26.1.0',
-            tweetText                  : 'com.twitter:twitter-text:1.14.7',
-            recyclerview               : 'com.android.support:recyclerview-v7:26.1.0'
+            tweetText                  : 'com.twitter:twitter-text:1.14.7'
     ]
 }

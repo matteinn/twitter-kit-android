@@ -6,9 +6,7 @@ Twitter Kit is a multi-module gradle project containing several Twitter SDKs inc
 
 ## Twitter Kit Features
 
-* Display Tweets and timelines
 * Compose Tweets
-* Monetize with MoPub integration
 * Log in with Twitter
 * Access the Twitter API
 

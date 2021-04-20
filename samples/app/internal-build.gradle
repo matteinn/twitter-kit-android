@@ -43,14 +43,12 @@ android {
             resValue "string", "com.twitter.sdk.android.CONSUMER_SECRET", "\"${props.getProperty("twitterConsumerSecret")}\""
             resValue "bool", "com.twitter.sdk.android.TRACE_ENABLED", "true"
             resValue "bool", "com.twitter.sdk.android.COLLECT_IDENTIFIERS_ENABLED", "true"
-            buildConfigField "String", "MOPUB_AD_UNIT_ID", "\"${props.getProperty("mopubAdUnitId")}\""
         }
         release {
             resValue "string", "com.twitter.sdk.android.CONSUMER_KEY", "\"${props.getProperty("twitterConsumerKey")}\""
             resValue "string", "com.twitter.sdk.android.CONSUMER_SECRET", "\"${props.getProperty("twitterConsumerSecret")}\""
             resValue "bool", "com.twitter.sdk.android.TRACE_ENABLED", "false"
             resValue "bool", "com.twitter.sdk.android.COLLECT_IDENTIFIERS_ENABLED", "true"
-            buildConfigField "String", "MOPUB_AD_UNIT_ID", "\"${props.getProperty("mopubAdUnitId")}\""
             minifyEnabled true
             proguardFiles getDefaultProguardFile('proguard-android.txt')
         }
@@ -78,7 +76,6 @@ android {
 
 dependencies {
     implementation project(path: ':sdk:twitter:twitter')
-    implementation project(path: ':sdk:twitter:twitter-mopub')
     implementation dependency.appCompat
     implementation dependency.design
     implementation dependency.okHttpInterceptor

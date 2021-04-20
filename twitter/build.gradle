@@ -57,14 +57,12 @@ android {
 
 ext.projectDependencies = [
         ':twitter-core' : 'com.twitter.sdk.android:twitter-core:+@aar',
-        ':tweet-ui' : 'com.twitter.sdk.android:tweet-ui:+@aar',
         ':tweet-composer' : 'com.twitter.sdk.android:tweet-composer:+@aar'
 ]
 
 dependencies {
     compile project(':twitter-core')
     compile project(':tweet-composer')
-    compile project(':tweet-ui')
 
     testCompile dependency.mockito
     testCompile dependency.junit
