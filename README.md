@@ -19,7 +19,7 @@ Grab the aar files from the releases tab and moved them into your project, usual
 
 dependencies {
   implementation name: 'tweet-composer-{version}', ext: 'aar'
-  implementation name: 'twitter-core-{version}', ext: 'aar' // this will be grabbed transitively if you use tweet-composer
+  implementation name: 'twitter-core-{version}', ext: 'aar'
 }
 
 ```

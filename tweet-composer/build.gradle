@@ -61,7 +61,7 @@ android {
 }
 
 dependencies {
-    api project(':twitter-core')
+    implementation project(':twitter-core')
 
     implementation dependency.picasso
     implementation dependency.tweetText
