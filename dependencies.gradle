@@ -31,7 +31,7 @@ ext {
             dexmakerMockito            : 'com.linkedin.dexmaker:dexmaker-mockito:2.2.0',
 
             // Other
-            picasso                    : 'com.squareup.picasso:picasso:2.5.2',
+            picasso                    : 'com.squareup.picasso:picasso:2.8',
             retrofit                   : 'com.squareup.retrofit2:retrofit:2.3.0',
             retrofitMock               : 'com.squareup.retrofit2:retrofit-mock:2.3.0',
             retrofitGsonConverter      : 'com.squareup.retrofit2:converter-gson:2.3.0',
