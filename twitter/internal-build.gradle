@@ -70,7 +70,6 @@ android {
 
 ext.projectDependencies = [
         ':sdk:twitter:twitter-core',
-        ':sdk:twitter:tweet-ui',
         ':sdk:twitter:tweet-composer'
 ]
 
