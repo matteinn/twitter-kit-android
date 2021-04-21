@@ -19,7 +19,6 @@ package com.twitter.sdk.android.core.identity;
 
 import android.app.Activity;
 import android.content.Intent;
-import android.os.Build;
 import android.os.Bundle;
 
 import com.twitter.sdk.android.core.Callback;
@@ -57,10 +56,8 @@ public class OAuthHandlerTest  {
     public void testAuthorize() {
         final Activity mockActivity = mock(Activity.class);
         doNothing().when(mockActivity).startActivityForResult(any(Intent.class), anyInt());
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN) {
-            doNothing().when(mockActivity).startActivityForResult(any(Intent.class), anyInt(),
-                    any(Bundle.class));
-        }
+        doNothing().when(mockActivity).startActivityForResult(any(Intent.class), anyInt(),
+                any(Bundle.class));
         authHandler.authorize(mockActivity);
         verify(mockActivity).startActivityForResult(any(Intent.class), eq(REQUEST_CODE));
     }

@@ -38,8 +38,7 @@ class FileUtils {
 
     @TargetApi(Build.VERSION_CODES.KITKAT)
     static String getPath(final Context context, final Uri uri) {
-        final boolean isKitKat = Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT;
-        if (isKitKat && isMediaDocumentAuthority(uri)) {
+        if (isMediaDocumentAuthority(uri)) {
             final String documentId = DocumentsContract.getDocumentId(uri); // e.g. "image:1234"
             final String[] parts = documentId.split(":");
             final String type = parts[0];

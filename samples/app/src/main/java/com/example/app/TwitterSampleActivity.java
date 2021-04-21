@@ -24,7 +24,6 @@ import android.view.MenuInflater;
 import android.view.View;
 
 import com.example.app.tweetcomposer.TweetComposerMainActivity;
-import com.example.app.tweetui.TweetUiMainActivity;
 import com.example.app.twittercore.TwitterCoreMainActivity;
 
 public class TwitterSampleActivity extends BaseActivity {
@@ -48,9 +47,5 @@ public class TwitterSampleActivity extends BaseActivity {
 
     public void onTweetComposer(View view) {
         startActivity(new Intent(this, TweetComposerMainActivity.class));
-    }
-
-    public void onTweetUi(View view) {
-        startActivity(new Intent(this, TweetUiMainActivity.class));
     }
 }

@@ -4,7 +4,6 @@ buildscript {
     }
 
     dependencies {
-        classpath dependency.spoonGradlePlugin
         classpath dependency.androidGradlePlugin
     }
 }
@@ -22,7 +21,6 @@ if (propsFile.exists()) {
 }
 
 apply plugin: 'com.android.application'
-apply plugin: 'spoon'
 
 android {
     compileSdkVersion rootProject.compileSdkVersion
@@ -34,7 +32,6 @@ android {
         versionName "1.0"
         minSdkVersion rootProject.minSdkVersion
         targetSdkVersion rootProject.targetSdkVersion
-        testInstrumentationRunner "com.example.app.SpoonInstrumentationTestRunner"
     }
 
     buildTypes {
@@ -43,14 +40,12 @@ android {
             resValue "string", "com.twitter.sdk.android.CONSUMER_SECRET", "\"${props.getProperty("twitterConsumerSecret")}\""
             resValue "bool", "com.twitter.sdk.android.TRACE_ENABLED", "true"
             resValue "bool", "com.twitter.sdk.android.COLLECT_IDENTIFIERS_ENABLED", "true"
-            buildConfigField "String", "MOPUB_AD_UNIT_ID", "\"${props.getProperty("mopubAdUnitId")}\""
         }
         release {
             resValue "string", "com.twitter.sdk.android.CONSUMER_KEY", "\"${props.getProperty("twitterConsumerKey")}\""
             resValue "string", "com.twitter.sdk.android.CONSUMER_SECRET", "\"${props.getProperty("twitterConsumerSecret")}\""
             resValue "bool", "com.twitter.sdk.android.TRACE_ENABLED", "false"
             resValue "bool", "com.twitter.sdk.android.COLLECT_IDENTIFIERS_ENABLED", "true"
-            buildConfigField "String", "MOPUB_AD_UNIT_ID", "\"${props.getProperty("mopubAdUnitId")}\""
             minifyEnabled true
             proguardFiles getDefaultProguardFile('proguard-android.txt')
         }
@@ -58,12 +53,6 @@ android {
 
     packagingOptions {
         exclude 'LICENSE.txt'
-    }
-
-    spoon {
-        if (project.hasProperty('spoonClassName')) {
-            className = project.spoonClassName
-        }
     }
 
     lintOptions {
@@ -78,15 +67,10 @@ android {
 
 dependencies {
     implementation project(path: ':sdk:twitter:twitter')
-    implementation project(path: ':sdk:twitter:twitter-mopub')
     implementation dependency.appCompat
     implementation dependency.design
     implementation dependency.okHttpInterceptor
 
     debugImplementation dependency.leakCanary
     releaseImplementation dependency.leakCanaryNoOp
-
-    androidTestCompile dependency.spoon
-    androidTestCompile dependency.espresso
-    androidTestCompile dependency.androidTestingSupport
 }
