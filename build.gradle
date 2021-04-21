@@ -22,7 +22,6 @@ subprojects { Project subproject ->
         repositories {
             mavenCentral()
             google()
-            maven { url 'https://maven.fabric.io/public' }
         }
         dependencies {
             classpath dependency.androidGradlePlugin
@@ -33,8 +32,4 @@ subprojects { Project subproject ->
         google()
         mavenCentral()
     }
-}
-
-task wrapper(type: Wrapper) {
-    gradleVersion = '4.2.1'
 }
