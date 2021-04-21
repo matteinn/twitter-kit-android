@@ -62,9 +62,6 @@ dependencies {
     api dependency.gson
     api dependency.okHttp
 
-    androidTestImplementation dependency.mockito
-    androidTestImplementation dependency.dexmakerMockito
-
     testImplementation dependency.mockito
     testImplementation dependency.junit
     testImplementation dependency.retrofitMock
