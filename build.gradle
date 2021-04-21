@@ -25,7 +25,6 @@ subprojects { Project subproject ->
         }
         dependencies {
             classpath dependency.androidGradlePlugin
-            classpath dependency.androidMavenGradlePlugin
 
         }
     }
